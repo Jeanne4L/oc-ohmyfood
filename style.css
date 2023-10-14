@@ -222,12 +222,12 @@ header i {
 	align-items: center;
 	box-shadow: inset 0px 13px 14px -13px #b6b6b6;
 }
-.fa-location-dot {
-	font-size: 1.1rem;
+.location p,
+.location i {
+	font-size: 0.9rem;
 }
 .location span {
 	margin-left: 16px;
-	font-size: 1.12rem;
 }
 
 /*  RESERVATION  */
