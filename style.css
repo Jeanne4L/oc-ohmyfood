@@ -52,13 +52,13 @@
 }
 @keyframes dishes {
 	0% {
-		transform: translateY(10px);
+		transform: translateY(25px);
 		opacity: 0;
 	}
 	25% {
 		opacity: 1;
 	}
-	75% {
+	50% {
 		transform: translateY(0px);
 	}
 	100% {
@@ -231,15 +231,15 @@ header i {
 }
 /*  BUTTON  */
 .btn {
-	display: flex;
+	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 	border-radius: 50px;
-	width: 220px;
 	height: 50px;
 	border: none;
 	box-shadow: 0px 5px 15px -3px #909090;
 	opacity: 1;
+	padding: 20px 30px;
 }
 .btn:hover {
 	opacity: 0.9;
@@ -343,14 +343,16 @@ figure .heart {
 	right: 25px;
 	font-size: 1.5rem;
 }
-figure .fa-solid {
+figure .fa-solid,
+.title-heart .fa-solid {
 	opacity: 0;
 	background: linear-gradient(#9356dc, #ff79da);
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
 }
-figure .fa-solid:hover {
+figure .fa-solid:hover,
+.title-heart .fa-solid:hover {
 	animation: heart 400ms forwards;
 }
 
