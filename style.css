@@ -283,11 +283,11 @@ header i {
 	align-items: center;
 	justify-content: flex-start;
 	height: 75px;
+	width: 100%;
 	max-width: 450px;
 	border-radius: 20px;
 	margin-bottom: 25px;
 	box-shadow: 0px 5px 15px -3px #c7c4c4;
-	padding-right: 55px;
 }
 .step p:not(.number) {
 	margin-left: 25px;
@@ -649,6 +649,7 @@ footer a:hover {
 	}
 	.step {
 		padding-right: 15px;
+		width: auto;
 	}
 	.step p:not(.number) {
 		margin-left: 15px;
