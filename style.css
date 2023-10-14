@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+:root {
+	--white: #fff;
+	--primary: #9356dc;
+	--purple-gradient: linear-gradient(#ff79da, #9356dc);
+	--light-gray: #f6f6f6;
+	--dark-gray: #ececec;
+	--green: #99e2d0;
+	--green-font: #008766;
+	--footer-color: #353535;
+
+	--logo-font: 'Shrikhand', cursive;
+	--text-font: 'Roboto', sans-serif;
+}
+
+@keyframes loading-screen {
+	0% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(-3000px);
+	}
+}
+@keyframes loading-circle {
+	0% {
+		transform: translateY(0%);
+	}
+	25% {
+		transform: translateY(-50%);
+	}
+	50% {
+		transform: translateY(50%);
+	}
+	75% {
+		transform: translateY(-50%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+@keyframes heart {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes dishes {
+	0% {
+		transform: translateY(10px);
+		opacity: 0;
+	}
+	25% {
+		opacity: 1;
+	}
+	75% {
+		transform: translateY(0px);
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+* {
+	box-sizing: border-box;
+	font-family: var(--text-font);
+}
+.logo-font {
+	font-family: var(--logo-font);
+}
+body {
+	margin: 0;
+}
+a {
+	color: currentColor;
+	text-decoration: none;
+}
+ul {
+	padding: 0;
+}
+li {
+	list-style-type: none;
+}
+.container {
+	width: 90%;
+	max-width: 1215px;
+	margin: auto;
+}
+h2 {
+	font-size: 1.5rem;
+}
+
+/* BACKGROUND */
+.screen,
+header,
+.operation,
+.menu__bubble,
+figure {
+	background-color: var(--white);
+}
+body,
+.step--gray,
+.section--gray {
+	background-color: var(--light-gray);
+}
+.btn,
+.loading-spinner__circle {
+	background: var(--purple-gradient);
+}
+.new,
+.menu__line,
+.menu__check {
+	background-color: var(--green);
+}
+.location {
+	background-color: var(--dark-gray);
+}
+.new {
+	color: var(--green-font);
+}
+footer {
+	background-color: var(--footer-color);
+}
+figure .fa-solid,
+.fa-store {
+	color: var(--primary);
+}
+.menu__check,
+footer,
+footer a,
+.btn a,
+.number {
+	color: var(--white);
+}
+
+/* SPINNER */
+.screen {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	animation: loading-screen 1ms 3000ms linear forwards;
+	z-index: 20;
+}
+.screen .loading-spinner {
+	display: flex;
+	justify-content: space-evenly;
+	width: 150px;
+	height: 100px;
+}
+.loading-spinner__circle {
+	position: relative;
+	z-index: 2;
+	width: 25px;
+	height: 25px;
+	border-radius: 50px;
+	animation: loading-circle 1300ms ease-in-out;
+}
+.screen .loading-spinner__circle--1 {
+	animation-delay: 433.3333333333ms;
+}
+.screen .loading-spinner__circle--2 {
+	animation-delay: 866.6666666667ms;
+}
+.screen .loading-spinner__circle--3 {
+	animation-delay: 1300ms;
+}
+
+/*  HEADER  */
+header {
+	height: 66px;
+	display: flex;
+	justify-content: flex-start;
+}
+header .container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header img {
+	width: 170px;
+	height: auto;
+	margin: auto;
+}
+header i {
+	font-size: 1.4rem;
+}
+
+/* ---------------------------------------------------- */
+/* ---------------------HOME PAGE---------------------- */
+/* ---------------------------------------------------- */
+
+/*  LOCATION  */
+.location {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: inset 0px 13px 14px -13px #b6b6b6;
+}
+.fa-location-dot {
+	font-size: 1.1rem;
+}
+.location span {
+	margin-left: 16px;
+	font-size: 1.12rem;
+}
+
+/*  RESERVATION  */
+.reservation {
+	padding: 40px 0 60px 0;
+}
+.reservation .container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+.reservation h1 {
+	width: 70%;
+	margin: 0;
+}
+.reservation p:not(.btn p) {
+	font-size: 1.2rem;
+	margin: 15px 0 30px 0;
+}
+/*  BUTTON  */
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50px;
+	width: 220px;
+	height: 50px;
+	border: none;
+	box-shadow: 0px 5px 15px -3px #909090;
+	opacity: 1;
+}
+.btn:hover {
+	opacity: 0.9;
+}
+
+/*  OPERATION  */
+.operation h2 {
+	margin-bottom: 30px;
+}
+.steps {
+	display: flex;
+	flex-direction: column;
+	max-width: 410px;
+	padding-left: 12.5px;
+	margin: 0 auto;
+}
+.step {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	height: 75px;
+	border-radius: 20px;
+	margin-bottom: 25px;
+	box-shadow: 0px 5px 15px -3px #b6b6b6;
+}
+.step p:not(.number) {
+	margin-left: 25px;
+	font-weight: 600;
+}
+.step--purple {
+	background-color: rgba(147, 86, 220, 0.12);
+}
+.number {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 30px 0 -12.5px;
+	font-size: 0.9rem;
+	background-color: var(--primary);
+	border-radius: 50px;
+	width: 25px;
+	height: 25px;
+}
+.fa-solid {
+	font-size: 1.3rem;
+}
+.fa-mobile-screen-button,
+.fa-list-ul {
+	color: #838383;
+}
+.restaurant,
+.operation {
+	padding: 30px 0 50px 0;
+}
+
+/*  RESTAURANTS  */
+.restaurant h2 {
+	margin-bottom: 30px;
+}
+figure {
+	position: relative;
+	width: 100%;
+	height: 250px;
+	border-radius: 15px;
+	margin: 0 0 20px 0;
+	box-shadow: 0px 5px 15px -3px #dcdcdc;
+}
+figure img {
+	width: 100%;
+	height: 166px;
+	object-fit: cover;
+	border-radius: 15px 15px 0 0;
+}
+figure .new {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 90px;
+	height: 30px;
+	border-radius: 3px;
+	font-size: 0.9rem;
+	font-weight: bold;
+}
+figcaption {
+	position: relative;
+	padding: 15px 15px;
+}
+figure h3 {
+	margin: 0;
+	font-size: 1.2rem;
+}
+figure p {
+	margin: 5px 0 0 0;
+}
+figure .heart {
+	position: absolute;
+	top: 20px;
+	right: 25px;
+	font-size: 1.5rem;
+}
+figure .fa-solid {
+	opacity: 0;
+}
+figure .fa-solid:hover {
+	animation: heart 400ms forwards;
+}
+
+/*  FOOTER  */
+footer {
+	padding: 25px 0;
+}
+footer h5 {
+	margin: 0;
+	font-size: 1.25rem;
+	font-weight: lighter;
+}
+footer ul {
+	line-height: 1.7;
+}
+footer .fa-solid {
+	margin-right: 5px;
+}
+footer .fa-utensils {
+	font-size: 0.9rem;
+}
+footer .fa-handshake-angle {
+	font-size: 0.7rem;
+}
