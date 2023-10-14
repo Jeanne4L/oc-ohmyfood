@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
 
 :root {
 	--white: #fff;
@@ -13,6 +13,10 @@
 
 	--logo-font: 'Shrikhand', cursive;
 	--text-font: 'Roboto', sans-serif;
+
+	--light: 300;
+	--normal: 500;
+	--bold: 700;
 }
 
 @keyframes loading-screen {
@@ -69,6 +73,7 @@
 * {
 	box-sizing: border-box;
 	font-family: var(--text-font);
+	font-weight: var(--normal);
 }
 .logo-font {
 	font-family: var(--logo-font);
@@ -133,6 +138,18 @@ footer a,
 .btn a,
 .number {
 	color: var(--white);
+}
+
+/*  FONTS  */
+.reservation p:not(.btn p),
+figure p,
+.menu h2,
+.bubble__title p {
+	font-weight: var(--light);
+}
+h1,
+h2:not(.menu h2) {
+	font-weight: var(--bold);
 }
 
 /* SPINNER */
@@ -228,9 +245,10 @@ header i {
 	margin: 0;
 }
 .reservation p:not(.btn p) {
-	margin: 15px 0 30px 0;
-	font-size: 1.1rem;
+	margin: 30px 0;
+	font-size: 1rem;
 }
+
 /*  BUTTON  */
 .btn {
 	display: inline-flex;
@@ -241,7 +259,8 @@ header i {
 	border: none;
 	box-shadow: 0px 5px 15px -3px #909090;
 	opacity: 1;
-	padding: 20px 30px;
+	padding: 12px 24px;
+	font-size: 0.9rem;
 }
 .btn:hover {
 	opacity: 0.9;
@@ -266,12 +285,11 @@ header i {
 	max-width: 450px;
 	border-radius: 20px;
 	margin-bottom: 25px;
-	box-shadow: 0px 5px 15px -3px #dcdcdc;
+	box-shadow: 0px 5px 15px -3px #c7c4c4;
 	padding-right: 55px;
 }
 .step p:not(.number) {
 	margin-left: 25px;
-	font-weight: 600;
 }
 
 .number {
@@ -307,7 +325,7 @@ figure {
 	height: 250px;
 	border-radius: 15px;
 	margin: 0 0 20px 0;
-	box-shadow: 0px 5px 15px -3px #dcdcdc;
+	box-shadow: 0px 5px 15px -3px #c7c4c4;
 }
 figure img {
 	width: 100%;
@@ -326,7 +344,6 @@ figure img {
 	height: 30px;
 	border-radius: 3px;
 	font-size: 0.9rem;
-	font-weight: bold;
 }
 figcaption {
 	position: relative;
@@ -365,7 +382,6 @@ footer {
 footer h5 {
 	margin: 0;
 	font-size: 1.25rem;
-	font-weight: lighter;
 }
 footer ul {
 	line-height: 1.7;
@@ -393,6 +409,8 @@ footer .fa-handshake-angle {
 	position: absolute;
 	top: 0;
 	width: 100%;
+	max-width: 3000px;
+	margin: auto;
 	height: 270px;
 	object-fit: cover;
 }
@@ -402,7 +420,7 @@ footer .fa-handshake-angle {
 	max-width: 1000px;
 	border-radius: 40px 40px 0 0;
 	padding: 30px 0 70px 0;
-	margin: 0 auto -45px auto;
+	margin: 0 auto;
 	text-align: center;
 }
 .menu-section .container {
@@ -443,7 +461,7 @@ footer .fa-handshake-angle {
 /*  MENU  */
 .menu h2 {
 	text-transform: uppercase;
-	font-size: 1.05rem;
+	font-size: 1rem;
 	margin-bottom: 7px;
 }
 .menu__line {
@@ -457,7 +475,7 @@ footer .fa-handshake-angle {
 	align-items: center;
 	margin: 15px auto 0 auto;
 	border-radius: 15px;
-	box-shadow: 0px 5px 15px -3px #b6b6b6;
+	box-shadow: 0px 5px 15px -3px #c7c4c4;
 	animation: dishes 2000ms ease-in-out forwards;
 	opacity: 0;
 	overflow: hidden;
@@ -473,7 +491,7 @@ footer .fa-handshake-angle {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-.bubble__title p:not(.price) {
+.bubble__title p {
 	font-size: 1.03rem;
 	margin: 5px 0 0 0;
 	white-space: nowrap;
@@ -481,7 +499,6 @@ footer .fa-handshake-angle {
 	overflow: hidden;
 }
 .price {
-	font-weight: bold;
 	margin: 0;
 }
 .bubble__text {
@@ -548,7 +565,6 @@ footer .fa-handshake-angle {
 }
 .menu-page footer {
 	position: absolute;
-	margin-top: 45px;
 	width: 100%;
 }
 
@@ -560,9 +576,9 @@ footer .fa-handshake-angle {
 		justify-content: space-between;
 	}
 	.cards a {
-		width: 48%;
+		width: 45%;
 		height: 230px;
-		margin-bottom: 25px;
+		margin-bottom: 50px;
 	}
 	figure {
 		height: 100%;
@@ -600,7 +616,7 @@ footer .fa-handshake-angle {
 		font-size: 1rem;
 	}
 	.reservation h1 {
-		font-size: 2.5rem;
+		font-size: 2.1rem;
 	}
 
 	footer ul {
