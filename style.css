@@ -91,9 +91,6 @@ li {
 	max-width: 1215px;
 	margin: auto;
 }
-h2 {
-	font-size: 1.5rem;
-}
 
 /* BACKGROUND */
 .screen,
@@ -104,7 +101,7 @@ figure {
 	background-color: var(--white);
 }
 body,
-.step--gray,
+.step,
 .section--gray {
 	background-color: var(--light-gray);
 }
@@ -126,7 +123,7 @@ body,
 footer {
 	background-color: var(--footer-color);
 }
-figure .fa-solid,
+
 .fa-store {
 	color: var(--primary);
 }
@@ -229,8 +226,8 @@ header i {
 	margin: 0;
 }
 .reservation p:not(.btn p) {
-	font-size: 1.2rem;
 	margin: 15px 0 30px 0;
+	font-size: 1.1rem;
 }
 /*  BUTTON  */
 .btn {
@@ -255,7 +252,7 @@ header i {
 .steps {
 	display: flex;
 	flex-direction: column;
-	max-width: 410px;
+	align-items: center;
 	padding-left: 12.5px;
 	margin: 0 auto;
 }
@@ -264,17 +261,17 @@ header i {
 	align-items: center;
 	justify-content: flex-start;
 	height: 75px;
+	max-width: 450px;
 	border-radius: 20px;
 	margin-bottom: 25px;
-	box-shadow: 0px 5px 15px -3px #b6b6b6;
+	box-shadow: 0px 5px 15px -3px #dcdcdc;
+	padding-right: 55px;
 }
 .step p:not(.number) {
 	margin-left: 25px;
 	font-weight: 600;
 }
-.step--purple {
-	background-color: rgba(147, 86, 220, 0.12);
-}
+
 .number {
 	display: flex;
 	justify-content: center;
@@ -316,7 +313,7 @@ figure img {
 	object-fit: cover;
 	border-radius: 15px 15px 0 0;
 }
-figure .new {
+.new {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -335,7 +332,7 @@ figcaption {
 }
 figure h3 {
 	margin: 0;
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 }
 figure p {
 	margin: 5px 0 0 0;
@@ -348,6 +345,10 @@ figure .heart {
 }
 figure .fa-solid {
 	opacity: 0;
+	background: linear-gradient(#9356dc, #ff79da);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
 }
 figure .fa-solid:hover {
 	animation: heart 400ms forwards;
@@ -373,4 +374,113 @@ footer .fa-utensils {
 }
 footer .fa-handshake-angle {
 	font-size: 0.7rem;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 650px) {
+	.cards {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.cards a {
+		width: 48%;
+		height: 230px;
+		margin-bottom: 25px;
+	}
+	figure {
+		height: 100%;
+		margin-bottom: 25px;
+	}
+	figure img {
+		height: 156px;
+	}
+	figure figcaption {
+		padding-top: 10px;
+	}
+	figure .heart {
+		top: 10px;
+	}
+
+	footer ul {
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+	footer li {
+		width: 50%;
+		margin-bottom: 5px;
+	}
+}
+
+@media (min-width: 800px) {
+	.fa-location-dot {
+		font-size: 1rem;
+	}
+	.reservation h1 {
+		font-size: 2.5rem;
+	}
+
+	footer ul {
+		font-size: 1rem;
+	}
+	footer li {
+		width: 30%;
+	}
+	footer li:first-child {
+		width: 35%;
+	}
+	footer li:nth-child(3) {
+		width: 25%;
+	}
+	footer li:last-child {
+		width: 10%;
+	}
+}
+
+@media (min-width: 900px) {
+	.steps {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.step {
+		padding-right: 15px;
+	}
+	.step p:not(.number) {
+		margin-left: 15px;
+	}
+	.number {
+		margin-right: 10px;
+	}
+}
+@media (min-width: 1000px) {
+	.container {
+		width: 80%;
+	}
+	.operation h2 {
+		margin: 0 auto 30px auto;
+	}
+	.step {
+		width: 30%;
+	}
+
+	.cards a {
+		height: 270px;
+	}
+	figure img {
+		height: 186px;
+	}
+
+	footer .container {
+		display: flex;
+	}
+	footer nav {
+		flex: 1;
+	}
+	footer h5 {
+		display: inline-block;
+		width: 20%;
+		display: flex;
+		align-items: center;
+	}
 }
