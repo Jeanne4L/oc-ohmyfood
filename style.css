@@ -180,13 +180,13 @@ h2:not(.menu h2) {
 	animation: loading-circle 1300ms ease-in-out;
 }
 .screen .loading-spinner__circle--1 {
-	animation-delay: 433.3333333333ms;
+	animation-delay: 400ms;
 }
 .screen .loading-spinner__circle--2 {
-	animation-delay: 866.6666666667ms;
+	animation-delay: 800ms;
 }
 .screen .loading-spinner__circle--3 {
-	animation-delay: 1300ms;
+	animation-delay: 1200ms;
 }
 
 /*  HEADER  */
