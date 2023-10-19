@@ -662,6 +662,11 @@ footer a:hover {
 	.container {
 		width: 80%;
 	}
+	header .container,
+	footer .container {
+		width: 90%;
+		max-width: 1440px;
+	}
 	.operation h2 {
 		margin: 0 auto 30px auto;
 	}
@@ -674,5 +679,13 @@ footer a:hover {
 	}
 	figure img {
 		height: 186px;
+	}
+}
+@media (min-width: 1200px) {
+	.number {
+		margin-right: 25px;
+	}
+	.step p:not(.number) {
+		margin-left: 25px;
 	}
 }
